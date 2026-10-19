@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Slides Presentation</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="topbar">
+        <h2>Markdown Slides</h2>
+
+        <div class="top-actions">
+            <span id="saveStatus">Loading slides...</span>
+            <button id="newBtn">New Slides</button>
+            <button id="saveBtn">Save Slides</button>
+            <button id="exportBtn">Export Markdown</button>
+            <button id="presentBtn">Present</button>
+        </div>
+    </header>
+
+    <main class="workspace">
+        <section class="editor-panel">
+            <div class="panel-heading">
+                <h3>Markdown Editor</h3>
+                <span>Use --- between slides</span>
+            </div>
+
+            <textarea
+                id="markdownEditor"
+                spellcheck="false"
+                aria-label="Markdown editor"
+                placeholder="Write your slides here..."
+            ></textarea>
+        </section>
+
+        <section class="preview-panel" id="previewPanel">
+            <div class="panel-heading preview-heading">
+                <h3>Slide Preview</h3>
+                <span id="previewLabel">Live Preview</span>
+            </div>
+
+            <div class="slide-stage">
+                <article id="slideContent" class="slide-content"></article>
+            </div>
+
+            <div class="slide-controls">
+                <button id="prevBtn">← Left</button>
+                <span id="slideCounter">1 / 1</span>
+                <button id="nextBtn">Right →</button>
+                <button id="fullscreenBtn">⛶ Full Screen</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
